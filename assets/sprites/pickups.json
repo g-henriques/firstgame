@@ -1,0 +1,286 @@
+{
+ "frames": [
+  {
+   "filename": "pickups 0.aseprite",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 1.aseprite",
+   "frame": {
+    "x": 10,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 2.aseprite",
+   "frame": {
+    "x": 20,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 3.aseprite",
+   "frame": {
+    "x": 30,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 4.aseprite",
+   "frame": {
+    "x": 40,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 5.aseprite",
+   "frame": {
+    "x": 50,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 6.aseprite",
+   "frame": {
+    "x": 60,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 7.aseprite",
+   "frame": {
+    "x": 70,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  },
+  {
+   "filename": "pickups 8.aseprite",
+   "frame": {
+    "x": 80,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 10,
+    "h": 10
+   },
+   "sourceSize": {
+    "w": 10,
+    "h": 10
+   },
+   "duration": 100
+  }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3",
+  "image": "pickups.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 90,
+   "h": 10
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "gem_blue",
+    "from": 0,
+    "to": 0,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "gem_green",
+    "from": 1,
+    "to": 1,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "gem_red",
+    "from": 2,
+    "to": 2,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "gem_purple",
+    "from": 3,
+    "to": 3,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "heart",
+    "from": 4,
+    "to": 4,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "skull",
+    "from": 5,
+    "to": 5,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "clock",
+    "from": 6,
+    "to": 6,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "star",
+    "from": 7,
+    "to": 7,
+    "direction": "forward",
+    "color": "#000000ff"
+   },
+   {
+    "name": "chest",
+    "from": 8,
+    "to": 8,
+    "direction": "forward",
+    "color": "#000000ff"
+   }
+  ],
+  "layers": [
+   {
+    "name": "Layer 1",
+    "opacity": 255,
+    "blendMode": "normal"
+   }
+  ],
+  "slices": []
+ }
+}

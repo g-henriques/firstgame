@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/game_over.gd" id="1_script"]
+
+[node name="GameOver" type="CanvasLayer"]
+process_mode = 3
+layer = 11
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0941176, 0.0784314, 0.145098, 0.72)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+layout_mode = 2
+theme_type_variation = &"PanelGold"
+custom_minimum_size = Vector2(260, 0)
+
+[node name="VBox" type="VBoxContainer" parent="Center/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="Center/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HugeLabel"
+text = "YOU DIED"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Center/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"DimLabel"
+text = "The arena claims another soul..."
+horizontal_alignment = 1
+
+[node name="Stats" type="GridContainer" parent="Center/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 3
+
+[node name="BestLabel" type="Label" parent="Center/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.172549, 0.909804, 0.960784, 1)
+text = "NEW BEST TIME!"
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Center/Panel/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="AgainButton" type="Button" parent="Center/Panel/VBox/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play Again"
+
+[node name="MenuButton" type="Button" parent="Center/Panel/VBox/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Main Menu"
