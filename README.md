@@ -64,6 +64,10 @@ tools/export_aseprite.sh <nome>
 godot --headless --path . --script res://scripts/editor/build_theme.gd
 ```
 
+O `.claude/settings.json` do repositório ativa automaticamente o plugin `aseprite@g-henriques`
+(skill `aseprite-pixel-art`, de `g-henriques/claude-skills`) no Claude Code. A skill precisa do
+servidor MCP do Aseprite, que só existe onde o Aseprite está instalado (o teu computador).
+
 `tools/art/build_art.py` é o gerador que criou a primeira versão da arte (escreve `.aseprite`
 nativos com camadas, tags e durações). Correr de novo **sobrescreve** `art/` e `assets/`.
 
