@@ -69,6 +69,7 @@ func _fit_to_sprite() -> void:
 	var size := Assets.frame_size("player")
 	sprite.position = Vector2(0, -size.y / 2.0)
 	shadow.texture = Assets.texture("shadow")
+	shadow.scale = Vector2.ONE * (size.x / 16.0)
 	var circle := CircleShape2D.new()
 	circle.radius = maxf(3.0, size.x * 0.22)
 	body_shape.shape = circle
