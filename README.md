@@ -71,8 +71,8 @@ O `.claude/settings.json` do repositório ativa automaticamente o plugin `asepri
 (skill `aseprite-pixel-art`, de `g-henriques/claude-skills`) no Claude Code. A skill precisa do
 servidor MCP do Aseprite, que só existe onde o Aseprite está instalado (o teu computador).
 
-`tools/art/build_art.py` é o gerador que criou a primeira versão da arte (escreve `.aseprite`
-nativos com camadas, tags e durações). Correr de novo **sobrescreve** `art/` e `assets/`.
+**Toda a arte nova ou redesenhada é feita no Aseprite através dessa skill** — não há geradores
+de sprites em código. Os ficheiros `art/*.aseprite` são a fonte; `assets/` é só o que se exporta deles.
 
 ## Estrutura
 
