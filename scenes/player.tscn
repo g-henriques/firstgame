@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_player"]
+[ext_resource type="Script" path="res://scripts/shake_camera.gd" id="2_camera"]
+[ext_resource type="Script" path="res://scripts/ui/ui_bar.gd" id="3_bar"]
+[ext_resource type="Texture2D" path="res://assets/ui/bar_hp.png" id="4_fill"]
+
+[sub_resource type="CircleShape2D" id="body"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="hurt"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="magnet"]
+radius = 40.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 1
+motion_mode = 1
+script = ExtResource("1_player")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+
+[node name="BodyShape" type="CollisionShape2D" parent="."]
+shape = SubResource("body")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="Shape" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("hurt")
+
+[node name="Magnet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="Shape" type="CollisionShape2D" parent="Magnet"]
+shape = SubResource("magnet")
+
+[node name="Weapons" type="Node2D" parent="."]
+
+[node name="HpBar" type="NinePatchRect" parent="."]
+offset_left = -10.0
+offset_top = 3.0
+offset_right = 10.0
+offset_bottom = 8.0
+script = ExtResource("3_bar")
+fill = ExtResource("4_fill")
+
+[node name="Camera" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+script = ExtResource("2_camera")
