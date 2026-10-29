@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "g-henriques": {
+      "source": { "source": "github", "repo": "g-henriques/claude-skills" }
+    }
+  },
+  "enabledPlugins": {
+    "aseprite@g-henriques": true
+  }
+}
