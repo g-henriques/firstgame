@@ -70,14 +70,16 @@ func _fit_to_sprite() -> void:
 	sprite.position = Vector2(0, -size.y / 2.0)
 	shadow.texture = Assets.texture("shadow")
 	shadow.scale = Vector2.ONE * (size.x / 16.0)
+	var box := Assets.hitbox("player")
+	var hurt := CircleShape2D.new()
+	hurt.radius = minf(box.size.x, box.size.y) / 2.0
+	hurt_shape.shape = hurt
+	hurt_shape.position = Vector2(0, box.get_center().y)
+	# Walls and pushing only care about the feet.
 	var circle := CircleShape2D.new()
-	circle.radius = maxf(3.0, size.x * 0.22)
+	circle.radius = maxf(3.0, box.size.x * 0.3)
 	body_shape.shape = circle
 	body_shape.position = Vector2(0, -circle.radius)
-	var hurt := CircleShape2D.new()
-	hurt.radius = size.x * 0.3
-	hurt_shape.shape = hurt
-	hurt_shape.position = Vector2(0, -size.y * 0.4)
 	weapons_node.position = Vector2(0, -size.y * 0.45)
 	hp_bar.position = Vector2(-hp_bar.size.x / 2.0, 3)
 

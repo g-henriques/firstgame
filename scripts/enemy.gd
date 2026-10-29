@@ -54,10 +54,11 @@ func _ready() -> void:
 	sprite.position = Vector2(0, -size.y / 2.0)
 	shadow.texture = Assets.texture("shadow")
 	shadow.scale = Vector2.ONE * (size.x / 16.0)
+	var box := Assets.hitbox(data["sheet"])
 	var circle := CircleShape2D.new()
-	circle.radius = maxf(3.0, size.x * 0.28)
+	circle.radius = maxf(3.0, minf(box.size.x, box.size.y) / 2.0 * scale_factor)
 	shape.shape = circle
-	shape.position = Vector2(0, -size.y * 0.35)
+	shape.position = Vector2(0, box.get_center().y * scale_factor)
 	if data.get("ghost", false):
 		collision_mask = 1  # floats through other enemies
 		sprite.self_modulate.a = 0.8

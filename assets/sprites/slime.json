@@ -45,6 +45,9 @@
   "scale": "1",
   "frameTags": [
    { "name": "move", "from": 0, "to": 3, "direction": "forward", "color": "#000000ff" }
+  ],
+  "slices": [
+   { "name": "hitbox", "keys": [{ "frame": 0, "bounds": {"x": 4, "y": 16, "w": 24, "h": 14 } }] }
   ]
  }
 }

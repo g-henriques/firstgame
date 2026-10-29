@@ -5,7 +5,12 @@
 #   tools/export_aseprite.sh player     # export only art/player.aseprite
 set -euo pipefail
 cd "$(dirname "$0")/.."
-ASEPRITE="${ASEPRITE:-aseprite}"
+if [[ -z "${ASEPRITE:-}" ]]; then
+  ASEPRITE=aseprite
+  for app in "/Applications/Aseprite.app" "$HOME/Library/Application Support/Steam/steamapps/common/Aseprite/Aseprite.app"; do
+    if ! command -v aseprite >/dev/null && [[ -x "$app/Contents/MacOS/aseprite" ]]; then ASEPRITE="$app/Contents/MacOS/aseprite"; fi
+  done
+fi
 UI_ART="panel panel_gold button_normal button_hover button_pressed button_disabled button_focus bar_bg bar_hp bar_xp bar_boss slot dim logo"
 
 export_one() {
@@ -17,7 +22,7 @@ export_one() {
     return
   fi
   "$ASEPRITE" -b "$src" --sheet "$out/$name.png" --sheet-type horizontal \
-    --data "$out/$name.json" --format json-array --list-tags
+    --data "$out/$name.json" --format json-array --list-tags --list-slices
   echo "$name -> $out/$name.png"
 }
 

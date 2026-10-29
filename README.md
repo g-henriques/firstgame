@@ -51,6 +51,9 @@ pixel — tem o ficheiro editável em `art/*.aseprite` e é exportada para `asse
   (`--format json-array --list-tags`). O jogo lê as **tags** (`idle`, `walk`, `move`…) e as
   **durações** de cada frame a partir do JSON, e o tamanho dos frames também — por isso podes
   redesenhar sprites (ex.: em 32×32), mudar o número de frames ou os tempos sem tocar no código.
+  A hitbox de cada personagem é o **slice `hitbox`** do ficheiro `.aseprite` (exportado com
+  `--list-slices`): o jogo usa um círculo no centro do slice, com raio igual a metade do lado menor.
+  Se redesenhares um sprite, ajusta o slice ao corpo (sem asas, armas, etc.).
 - `assets/ui/*.png` — painéis, botões, barras, slots e logótipo (9-slice no tema).
 - `assets/fonts/pixel_font.png` + `.fnt` — fonte bitmap (BMFont) com acentos.
 

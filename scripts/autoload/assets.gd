@@ -28,6 +28,20 @@ func frame_size(sheet: String) -> Vector2:
 	return Vector2(size["w"], size["h"])
 
 
+## The "hitbox" slice drawn in Aseprite, relative to the feet (bottom
+## centre of the frame), which is where every character's origin sits.
+## Sheets without the slice fall back to a box around the lower middle.
+func hitbox(sheet: String) -> Rect2:
+	var size := frame_size(sheet)
+	var feet := Vector2(size.x / 2.0, size.y)
+	for slice in meta(sheet)["meta"].get("slices", []):
+		if slice["name"] == "hitbox":
+			var b: Dictionary = slice["keys"][0]["bounds"]
+			return Rect2(Vector2(b["x"], b["y"]) - feet, Vector2(b["w"], b["h"]))
+	var side := size.x * 0.56
+	return Rect2(Vector2(-side / 2.0, -size.y * 0.35 - side / 2.0), Vector2(side, side))
+
+
 func sprite_frames(sheet: String) -> SpriteFrames:
 	if _frames.has(sheet):
 		return _frames[sheet]
